@@ -1,0 +1,181 @@
+
+:root {
+    --primary-color: #00BFA6;
+}
+
+body {
+    padding-top: 110px;
+}
+
+/* Custom Styles */
+.top-bar {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+
+
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../Activity/gd-group-discussion-tips.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: -4px;
+    
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, -0.9);
+    z-index: 1;
+}
+
+.hero-curve {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* .hero-curve::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 83.5%;
+    height: 105%;
+    background: white;
+    border-radius: 55% 0 0 48%;
+    z-index: 1; 
+    border-left: 12px solid #00BFA6; 
+    box-shadow: -10px 0 20px #00BFA6; 
+} */
+
+/* Keep your existing image styling */
+/* .hero-curve::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Activity/profile_01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 50% 0 0 50%;
+    z-index: 2; 
+} */
+
+
+/* ===========================================================*/
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 80px 0;
+}
+
+.hero-text {
+    color: #fff;
+    max-width: 550px;
+}
+
+.hero-text h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* Service Cards */
+.service-card {
+    background: var(--primary-color);
+    color: black;
+    padding: 30px;
+    position: relative;
+    min-height: 200px;
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+    text-align: center;
+}
+
+.service-icon {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    padding: 8px;
+}
+
+.service-icon img {
+    width: 57px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 76%;
+}
+
+/* Custom Button */
+.btn-custom {
+    background: var(--primary-color);
+    color: #000;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 191, 166, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-curve {
+        width: 100%;
+        height: 60%;
+        top: auto;
+        bottom: 0;
+    }
+    
+    .hero-curve::before {
+        clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+}
